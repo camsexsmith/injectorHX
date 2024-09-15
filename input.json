@@ -1,0 +1,10 @@
+{
+    "injector": {
+
+        "Conductivity": 160,
+        "HTC Hot": 5000,
+        "HTC Cold": 3000,
+        "Density": 7900
+
+    }
+}
