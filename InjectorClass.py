@@ -10,3 +10,4 @@ class Inj:
         self.CombTemp = InjJSON["Comb Temp"]
         self.FuelTemp = InjJSON["Fuel Temp"]
         self.thick = InjJSON["Thick"]
+        self.C = InjJSON["Specific Heat"]
