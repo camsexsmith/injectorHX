@@ -2,7 +2,7 @@
     "injector": {
 
         "Conductivity": 16.2,
-        "HTC Hot": 5000,
+        "HTC Hot": 6000,
         "HTC Cold": 4000,
         "Density": 7900,
         "Fuel Temp": 300,

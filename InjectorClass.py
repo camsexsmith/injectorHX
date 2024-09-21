@@ -11,3 +11,5 @@ class Inj:
         self.FuelTemp = InjJSON["Fuel Temp"]
         self.thick = InjJSON["Thick"]
         self.C = InjJSON["Specific Heat"]
+
+        self.alpha = self.K/(self.rho*self.C)
