@@ -1,4 +1,4 @@
-class Inj:
+class Injector:
 
     def __init__(self,JSON) -> None:
         
