@@ -1,5 +1,5 @@
 {
-    "injector": {
+    "setup": {
 
         "Conductivity": 16.2,
         "HTC Hot": 4000,

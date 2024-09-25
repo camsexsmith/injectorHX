@@ -1,0 +1,11 @@
+{
+    "304SS":{
+        "rho": 8000,
+        "yield":215e6,
+        "ultimate":505e6,
+        "youngs":193e9,
+        "specific heat":500,
+        "conductivity": 16.2,
+        "melting point": 1400
+    }
+}

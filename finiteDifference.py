@@ -44,5 +44,4 @@ ax1.set_xlabel('Time [s]')
 ax1.grid(True)
 ax1.legend()
 
-
 plt.show()
