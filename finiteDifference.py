@@ -1,5 +1,4 @@
 import json
-import math
 import numpy as np
 import InjectorClass as IC
 import matplotlib.pyplot as plt
@@ -17,7 +16,8 @@ Lvec = np.linspace(0,I.thick,nx)
 
 dx = Lvec[1]-Lvec[0]
 
-T = np.ones((len(tspan)+1,len(Lvec)))
+Ti = 300
+T = np.ones((len(tspan)+1,len(Lvec)))*Ti
 
 for p in range(len(tspan)):
     
