@@ -8,7 +8,7 @@ with open('input.json','r') as JSON:
 
 I = IC.Injector(inData)
 
-dt = 0.01
+dt = 0.0001
 tspan = np.arange(0,7,dt)
 
 nx = 5
