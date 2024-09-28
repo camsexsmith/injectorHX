@@ -6,10 +6,15 @@ import matplotlib.pyplot as plt
 with open('input.json','r') as JSON:
     inData = json.load(JSON)
 
-I = IC.Injector(inData)
+with open('materials.json','r') as JSON:
+    matData = json.load(JSON)
+
+mat = '17-4 SS'
+
+I = IC.Injector(inData,matData,mat)
 
 dt = 0.0001
-tspan = np.arange(0,7,dt)
+tspan = np.arange(0,10,dt)
 
 nx = 5
 Lvec = np.linspace(0,I.thick,nx)
@@ -19,7 +24,7 @@ dx = Lvec[1]-Lvec[0]
 LHS = dx**2/(I.alpha*dt)
 RHS = 2*(I.HHot*dx/I.K + 1)
 
-Ti = 300
+Ti = 150
 T = np.ones((len(tspan)+1,len(Lvec)))*Ti
 
 for p in range(len(tspan)):
