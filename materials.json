@@ -7,5 +7,35 @@
         "specific heat":500,
         "conductivity": 16.2,
         "melting point": 1400
+    },
+
+    "Copper":{
+        "rho": 8930,
+        "yield":33.3e6,
+        "ultimate":210e6,
+        "youngs":110e9,
+        "specific heat":385,
+        "conductivity": 385,
+        "melting point": 1083
+    },
+
+    "Al6061":{
+        "rho": 2700,
+        "yield":276e6,
+        "ultimate":310e6,
+        "youngs":68.9e9,
+        "specific heat":896,
+        "conductivity": 167,
+        "melting point": 600
+    },
+    
+    "17-4 SS":{
+        "rho": 7800,
+        "yield":1379e6,
+        "ultimate":1448e6,
+        "youngs":193e9,
+        "specific heat":460,
+        "conductivity": 17.9,
+        "melting point": 1400
     }
 }

@@ -16,6 +16,9 @@ Lvec = np.linspace(0,I.thick,nx)
 
 dx = Lvec[1]-Lvec[0]
 
+LHS = dx**2/(I.alpha*dt)
+RHS = 2*(I.HHot*dx/I.K + 1)
+
 Ti = 300
 T = np.ones((len(tspan)+1,len(Lvec)))*Ti
 
@@ -32,6 +35,10 @@ for p in range(len(tspan)):
         else:
             T[p+1,n] = (1 - (2*I.alpha*dt/dx**2))*T[p,n] + I.alpha*dt/dx**2*(T[p,n+1] + T[p,n-1])
 
+if LHS >= RHS:
+    print('Convergence satisfied')
+else:
+    print('Convergence failed')
 
 T = T[:-1]
 fig1, ax1 = plt.subplots()
