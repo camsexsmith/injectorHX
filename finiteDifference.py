@@ -9,7 +9,7 @@ with open('input.json','r') as JSON:
 with open('materials.json','r') as JSON:
     matData = json.load(JSON)
 
-mat = '17-4 SS'
+mat = '304SS'
 
 I = IC.Injector(inData,matData,mat)
 
