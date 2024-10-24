@@ -2,6 +2,7 @@ import json
 import numpy as np
 import InjectorClass as IC
 import matplotlib.pyplot as plt
+from style import colorprint
 
 with open('input.json','r') as JSON:
     inData = json.load(JSON)
@@ -9,7 +10,14 @@ with open('input.json','r') as JSON:
 with open('materials.json','r') as JSON:
     matData = json.load(JSON)
 
-mat = '304SS'
+# prompting for material index
+matNames = list(matData.keys())
+colorprint('\n\nMaterial Options:', 'g')
+for matName in matNames:
+    colorprint(f'{matNames.index(matName) +1}: {matName}', 'b')
+
+mat_ind = input(f'Enter the number for the material you want (1 - {len(matNames)}): ')
+mat = matNames[int(mat_ind)-1]
 
 I = IC.Injector(inData,matData,mat)
 
@@ -50,8 +58,8 @@ fig1, ax1 = plt.subplots()
 ax1.plot(tspan,T[:,0]-273,label='Hot Wall Temp')
 ax1.plot(tspan,T[:,2]-273,label='Mid Wall Temp')
 ax1.plot(tspan,T[:,-1]-273,label='Cold Wall Temp')
-#ax1.plot(tspan, [matData[mat] for _ in range(len(tspan))], linestyle='---')
-ax1.set_title('Injector Temperature vs Time')
+ax1.plot(tspan, np.ones(len(tspan))*matData[mat]['melting point'], linestyle='--', label=f'{mat} Melting Temp')
+ax1.set_title(f'{mat}: Injector Temperature vs Time')
 ax1.set_ylabel('Temperature [C]')
 ax1.set_xlabel('Time [s]')
 ax1.grid(True)
