@@ -1,11 +1,11 @@
 {
     "injector": {
 
-        "HTC Hot": 4000,
-        "HTC Cold": 3000,
+        "HTC Hot": 3500,
+        "HTC Cold": 5000,
         "Fuel Temp": 300,
-        "Comb Temp": 2800,
-        "Thick": 0.00625
+        "Comb Temp": 2600,
+        "Thick": 0.003125
 
     }
 }

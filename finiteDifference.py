@@ -14,7 +14,7 @@ mat = '304SS'
 I = IC.Injector(inData,matData,mat)
 
 dt = 0.01
-tspan = np.arange(0,10,dt)
+tspan = np.arange(0,15,dt)
 
 nx = 5
 Lvec = np.linspace(0,I.thick,nx)
@@ -24,7 +24,7 @@ dx = Lvec[1]-Lvec[0]
 LHS = dx**2/(I.alpha*dt)
 RHS = 2*(I.HHot*dx/I.K + 1)
 
-Ti = 150
+Ti = 220
 T = np.ones((len(tspan)+1,len(Lvec)))*Ti
 
 for p in range(len(tspan)):
