@@ -13,7 +13,7 @@ mat = '304SS'
 
 I = IC.Injector(inData,matData,mat)
 
-dt = 0.0001
+dt = 0.01
 tspan = np.arange(0,10,dt)
 
 nx = 5
@@ -50,6 +50,7 @@ fig1, ax1 = plt.subplots()
 ax1.plot(tspan,T[:,0]-273,label='Hot Wall Temp')
 ax1.plot(tspan,T[:,2]-273,label='Mid Wall Temp')
 ax1.plot(tspan,T[:,-1]-273,label='Cold Wall Temp')
+#ax1.plot(tspan, [matData[mat] for _ in range(len(tspan))], linestyle='---')
 ax1.set_title('Injector Temperature vs Time')
 ax1.set_ylabel('Temperature [C]')
 ax1.set_xlabel('Time [s]')
